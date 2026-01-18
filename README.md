@@ -14,7 +14,28 @@ In IT service management, without a structured approach, critical problems take 
 
 ## Version
 
-**1.0**
+**1.0.1**
+
+---
+
+## Business Impact
+This dashboard was designed to solve the 'Black Box' problem in IT Operations, providing real-time visibility into SLA breaches and allowing leads to reallocate resources before a P1 incident occurs.
+
+### Anomaly Detection
+The dashboard doesn't just show data; it alerts you to anomalies using a simple statistical trigger.
+
+**Problem Statement**: Manual KPI reporting took 4 hours per week.
+
+**Solution**: Automated Dash/Pandas pipeline.
+
+**Tech Stack**: Python, Plotly, Dash, Pandas.
+
+**Outcome**: Real-time visibility and a 100% reduction in manual reporting time.
+
+The machine learning anomaly detection features automate the analysis of time series data by creating accurate baselines of normal behavior in your data. These baselines then enable you to identify anomalous events or patterns.
+After your anomaly detection job creates baselines of normal behavior for your data, you can use that information to extrapolate future behavior.
+
+You can also use it to estimate the probability of a time series value occurring at a future date. For example, you might want to determine how likely it is that your disk utilization will reach 100% before the end of next week.
 
 ---
 
@@ -41,6 +62,16 @@ Uses a **speedometer-style gauge** to track a 95% target.
 - **Visual Benchmarking**: Red/Yellow/Green zones provide instant performance context.
 - **Prevention of Escalation**: Validates that L1 agents handled issues end-to-end by verifying that the `First Assignment Group` matches the `Resolving Group`.
 - **Delta Tracking**: Real-time indicators showing if performance improved or declined compared to the previous month.
+
+
+### 4. Anomaly Detection & E-mail notification
+Employs automated monitoring to identify statistical deviations from historical performance baselines.
+
+**Proactive Alerting**: Automatically triggers e-mail notifications to Service Desk Managers when volume spikes or SLA breaches exceed a defined standard deviation.
+
+**Root Cause Correlation**: Links anomalies to specific CI (Configuration Item) categories or changes, helping to distinguish between a "noisy" event and a genuine systemic failure.
+
+**Strategic Advantage**: Reduces "Mean Time to Detect" (MTTD) by surfacing invisible trends before they escalate into major incidents, ensuring leadership is informed via automated summaries rather than manual reporting.
 
 ---
 
@@ -152,6 +183,10 @@ The dashboard will be available at `http://127.0.0.1:8050/` in your web browser.
 ---
 
 ## Changelog
+
+### 1.0.1 – 2026-01-18
+
+- Updated with Anomaly Detection
 
 ### 1.0.0 – 2025-12-24
 
